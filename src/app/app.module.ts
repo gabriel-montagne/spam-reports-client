@@ -3,16 +3,22 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { SpamReportsComponent } from './components/spam-reports/spam-reports.component';
+import { ComponentsModule } from './components/components.module';
+import { HttpClientModule } from '@angular/common/http';
+import { NgReduxModule } from '@angular-redux/store';
+import { StoreModule } from './components/core/store/store.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SpamReportsComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    NgReduxModule,
+    ComponentsModule,
+    StoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
