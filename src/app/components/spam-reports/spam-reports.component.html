@@ -1,3 +1,21 @@
-<p>
-  spam-reports works!
-</p>
+<div class="container">
+  <div [class]="spamReport.state.toLowerCase()" *ngFor="let spamReport of spamReports">
+    <div class="col-1">
+      <div class="id" title="{{spamReport.id}}">
+        <span>Id : {{spamReport.id}}</span>
+      </div>
+      <div class="state">State : {{spamReport.state}}</div>
+      <div class="state">
+        <a href="#">Details</a>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="type">Type : {{spamReport?.payload?.reportType}}</div>
+      <div class="message">Message : {{spamReport?.payload?.message}}</div>
+    </div>
+    <div class="col-3">
+      <div><button (click)="blockReport(spamReport)">Block</button></div>
+      <div><button (click)="resolveReport(spamReport)">Resolve</button></div>
+    </div>
+  </div>
+</div>

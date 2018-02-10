@@ -1,0 +1,45 @@
+.container {
+  width: 510px;
+  >div {
+    display: inline-block;
+    border: 1px solid;
+    padding: 3px;
+    &.open {
+      border-color: yellow;
+    }
+    &.blocked {
+      border-color: red;
+    }
+    &.resolved {
+      border-color: blue;
+    }
+    .col-1 {
+      float: left;
+      width: 200px;
+      span {
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        width:190px;
+        display:inline-block;
+        cursor: default;
+      }
+    }
+    .col-2 {
+      float: left;
+      width: 200px;
+    }
+    .col-3 {
+      float: left;
+      width: 100px;
+
+      div {
+        width: 100%;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
