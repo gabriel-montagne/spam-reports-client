@@ -27,6 +27,20 @@
     "@ngtools/json-schema" "^1.1.0"
     rxjs "^5.5.6"
 
+"@angular-redux/form@^6.7.0":
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/@angular-redux/form/-/form-6.7.0.tgz#ac88e1cc619e8715aaad45cf629a93d251b5612d"
+  dependencies:
+    immutable "^3.8.1"
+
+"@angular-redux/router@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@angular-redux/router/-/router-7.0.0.tgz#98266dfc27b19a2011d43ee7dda32fd104be316b"
+
+"@angular-redux/store@7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@angular-redux/store/-/store-7.1.0.tgz#3e22da5f63cd2a2052e1a7bd7c16db4870389428"
+
 "@angular/animations@^5.2.0":
   version "5.2.4"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-5.2.4.tgz#c5ec749d84a0434733a28a82c6cb6a4e15246201"
@@ -3234,6 +3248,10 @@ ignore@^3.3.5:
 image-size@~0.5.0:
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
+
+immutable@^3.8.1:
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
 
 import-local@^1.0.0:
   version "1.0.0"
