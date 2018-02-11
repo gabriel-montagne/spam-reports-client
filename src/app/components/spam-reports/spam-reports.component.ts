@@ -53,20 +53,6 @@ export class SpamReportsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._spamReportsService.getSpamReports()
-      .subscribe(
-        (result: any) => {
-          const spamReportsJSON = result;
-          const spamReports = spamReportsJSON.map((element) => {
-            return new SpamReports(element);
-          })
-          this._spamReportsActions.saveSpamReports(spamReports);
-          return;
-        },
-        (error: any) => {
-          console.error(error);
-        }
-      );
   }
 
 }

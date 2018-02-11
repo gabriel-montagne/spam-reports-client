@@ -6,11 +6,15 @@ import { SpamReportsService } from './spam-reports.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { SpamReportsResolver } from './spam-reports.resolver';
 
 const ROUTES: Routes = [
   {
     path: '',
-    component: SpamReportsComponent
+    component: SpamReportsComponent,
+    resolve: {
+      spamReportsResolver: SpamReportsResolver
+    }
   }
 ];
 
@@ -22,7 +26,8 @@ const ROUTES: Routes = [
   ],
   providers: [
     SpamReportsActions,
-    SpamReportsService
+    SpamReportsService,
+    SpamReportsResolver
   ],
   declarations: [SpamReportsComponent],
   exports: [SpamReportsComponent]
