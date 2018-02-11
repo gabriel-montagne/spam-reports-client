@@ -7,7 +7,14 @@ import { ComponentsModule } from './components/components.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgReduxModule } from '@angular-redux/store';
 import { StoreModule } from './components/core/store/store.module';
+import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
+const ROUTES: Routes = [
+  { path: '', loadChildren: './components/components.module#ComponentsModule'},
+  { path: '**', redirectTo: '/'}
+];
 
 @NgModule({
   declarations: [
@@ -15,9 +22,11 @@ import { StoreModule } from './components/core/store/store.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    RouterModule.forRoot(ROUTES),
     HttpClientModule,
     NgReduxModule,
-    ComponentsModule,
     StoreModule
   ],
   providers: [],

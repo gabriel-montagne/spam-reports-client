@@ -4,10 +4,21 @@ import { SpamReportsActions } from './spam-reports.actions';
 import { SpamReportsComponent } from './spam-reports.component';
 import { SpamReportsService } from './spam-reports.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+const ROUTES: Routes = [
+  {
+    path: '',
+    component: SpamReportsComponent
+  }
+];
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    RouterModule.forChild(ROUTES),
   ],
   providers: [
     SpamReportsActions,
