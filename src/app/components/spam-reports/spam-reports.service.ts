@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/Rx';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
+
 
 @Injectable()
 export class SpamReportsService {
-  public url = 'http://localhost:8080/api/spamreports';
-  public token = '640cba331ea22491f11f6c2a07426cd5ed1f5a51';
+  public url = environment.apiUrl;
+  public token = environment.apiToken;
 
   constructor(
     private _apiHttp: HttpClient
